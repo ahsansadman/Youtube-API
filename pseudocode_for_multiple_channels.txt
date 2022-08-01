@@ -1,0 +1,21 @@
+""" Pseudocode for fetching as many channels as possible """
+
+
+1. models.py:
+    CREATE Channel model WITH channel_id as a field
+    ADD channel_id field as Foreign key of Channel model in YoutubeVideo model (This will CREATE a Many-To-One relationship between YoutubeVideo and Channel models)
+2. admin.py
+    REGISTER Channel model in the dashboard
+
+3. Admin Dashboard:
+    Add multiple channel_id's from the dashboard 
+
+2. tasks.py:
+    fetch_data():
+        GET all channel_id from Channel model in the database
+        WRAP entire function in a FOR LOOP
+        FOR each channel_id in the channel_id queryset:
+            CALL the search url of youtube api with the channel_id as the "channel_id" query parameter
+            BIND the current channel_id with the "channel_id" field of YoutubeVideo model instance while saving the video_data in the database 
+
+      

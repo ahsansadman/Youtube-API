@@ -35,7 +35,7 @@ def fetch_data():
         for result in results:
             video_ids.append(result['id']['videoId'])
         
-    ############################
+
 
     video_params = {
         'key' : settings.YOUTUBE_DATA_API_KEY,
@@ -64,5 +64,4 @@ def fetch_data():
                 video_data.tag.add(tag_data)
                 video_data.save()  
 
-            # videos.append(json.dumps(video_data))
-    # print(videos)
+
