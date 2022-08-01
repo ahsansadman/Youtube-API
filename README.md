@@ -31,9 +31,9 @@ All the endpoints start with `http://127.0.0.1:8000/`. The endpoints are given b
 | api/v1/performance/  | GET  | READ  | Get list of filtered videos by performance  |
 | api/v1/tag/  | GET  | READ  | Get list of filtered videos by tag  |
 
-( Note - Filter by performance is done by sorting the videos based on their views as no metric was found to get the first hour views of a video from youtube-api-v3.) 
+(Note - Filter by performance is done by sorting the videos based on their views as no metric was found to get the first hour views of a video from youtube-api-v3.) 
 
-THe application uses a scheduler to update the youtube videos view count every minute so that filtering by performance is done on current view count of the videos.  
+The application uses a scheduler to update the youtube videos view count every minute so that filtering by performance is done on current view count of the videos.  
 
 ## Frontend Structure
 The frontend of the web application is built on HTML, CSS and Javascript. The base index/homepage is rendered via django's template engine.
